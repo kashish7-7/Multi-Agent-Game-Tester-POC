@@ -1,0 +1,18 @@
+Game rules:
+1. Match same numbers with no active cells in between.
+2. Match numbers that add up to 10 with no active cells in between.
+
+Test case schema:
+- id: unique identifier
+- description: short summary
+- preconditions: initial board or state
+- actions: list of clicks
+- expected_result: what should happen
+- priority: 1-5, higher = more important
+
+Example tests:
+{"id": "test_01", "description": "Two identical numbers with one active cell in between", "preconditions": "Two identical numbers with one active cell in between", "actions": ["click cell (1,2)", "click cell (1,4)"], "expected_result": "Cells disappear, score +10", "priority": 3}
+{"id": "test_02", "description": "Match two identical numbers diagonally with no active cells", "preconditions": "Match two identical numbers diagonally with no active cells", "actions": ["click cell (1,2)", "click cell (1,4)"], "expected_result": "Cells disappear, score +10", "priority": 5}
+
+Instruction:
+Generate 20 new candidate test cases following the same format.
