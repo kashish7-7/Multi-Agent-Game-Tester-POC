@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi-Agent Game Tester</title>
+</head>
+<body>
+    <h1>Multi-Agent Game Tester</h1>
+    <input type="text" id="gameUrl" placeholder="Enter game URL" size="50">
+    <button onclick="runTests()">Run Tests</button>
+    <button onclick="loadReports()">Load Reports</button>
+    <pre id="output"></pre>
+
+    <script>
+        const output = document.getElementById("output");
+
+        async function runTests() {
+            const url = document.getElementById("gameUrl").value || "https://play.ezygamers.com/";
+            output.textContent = "⏳ Running tests...";
+            const res = await fetch(`http://localhost:8000/run_tests?game_url=${url}`);
+            const data = await res.json();
+            output.textContent = JSON.stringify(data, null, 2);
+        }
+
+        async function loadReports() {
+            output.textContent = "⏳ Loading reports...";
+            const res = await fetch(`http://localhost:8000/get_reports`);
+            const data = await res.json();
+            output.textContent = JSON.stringify(data, null, 2);
+        }
+    </script>
+</body>
+</html>

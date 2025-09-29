@@ -1,0 +1,130 @@
+import json
+
+test_cases = [
+    {
+        "test_id": "TL001",
+        "description": "Test case 1 - Simple Match",
+        "steps": ["Click on the first number link", "Click on the second number link"],
+        "expected_result": "Both numbers should match"
+    },
+    {
+        "test_id": "TL002",
+        "description": "Test case 2 - Different Numbers",
+        "steps": ["Click on the first number link", "Click on a different number link"],
+        "expected_result": "The numbers should not match"
+    },
+    {
+        "test_id": "TL003",
+        "description": "Test case 3 - Middle Number Match",
+        "steps": ["Click on the first number link", "Click on the middle number link"],
+        "expected_result": "The middle number should match"
+    },
+    {
+        "test_id": "TL004",
+        "description": "Test case 4 - Out of Range",
+        "steps": ["Click on a number link that is out of range"],
+        "expected_result": "An error message should appear"
+    },
+    {
+        "test_id": "TL005",
+        "description": "Test case 5 - Disabled Link",
+        "steps": ["Click on a disabled number link"],
+        "expected_result": "An error message should appear"
+    },
+    {
+        "test_id": "TL006",
+        "description": "Test case 6 - Multiple Matches",
+        "steps": ["Click on multiple number links"],
+        "expected_result": "Multiple numbers should match"
+    },
+    {
+        "test_id": "TL007",
+        "description": "Test case 7 - Negative Number",
+        "steps": ["Click on a negative number link"],
+        "expected_result": "An error message should appear"
+    },
+    {
+        "test_id": "TL008",
+        "description": "Test case 8 - Zero Number",
+        "steps": ["Click on a zero number link"],
+        "expected_result": "The number should not match"
+    },
+    {
+        "test_id": "TL009",
+        "description": "Test case 9 - Random Number",
+        "steps": ["Click on a random number link"],
+        "expected_result": "A random number should be selected"
+    },
+    {
+        "test_id": "TL010",
+        "description": "Test case 10 - Maximum Attempts Reached",
+        "steps": ["Click on a number link repeatedly until the maximum attempts are reached"],
+        "expected_result": "An error message should appear"
+    },
+    {
+        "test_id": "TL011",
+        "description": "Test case 11 - Timeout",
+        "steps": ["Wait for a certain amount of time before clicking on a number link"],
+        "expected_result": "An error message should appear"
+    },
+    {
+        "test_id": "TL012",
+        "description": "Test case 12 - Browser Closed",
+        "steps": ["Close the browser before clicking on a number link"],
+        "expected_result": "An error message should appear"
+    },
+    {
+        "test_id": "TL013",
+        "description": "Test case 13 - Game Over",
+        "steps": ["Click on a number link repeatedly until the game is over"],
+        "expected_result": "The game should be over"
+    },
+    {
+        "test_id": "TL014",
+        "description": "Test case 14 - Winning Combination",
+        "steps": ["Click on a combination of number links that results in a win"],
+        "expected_result": "The game should end with a win"
+    },
+    {
+        "test_id": "TL015",
+        "description": "Test case 15 - Losing Combination",
+        "steps": ["Click on a combination of number links that results in a loss"],
+        "expected_result": "The game should end with a loss"
+    },
+    {
+        "test_id": "TL016",
+        "description": "Test case 16 - Random Winning Combination",
+        "steps": ["Click on random number links until a winning combination is reached"],
+        "expected_result": "The game should end with a win"
+    },
+    {
+        "test_id": "TL017",
+        "description": "Test case 17 - Random Losing Combination",
+        "steps": ["Click on random number links until a losing combination is reached"],
+        "expected_result": "The game should end with a loss"
+    },
+    {
+        "test_id": "TL018",
+        "description": "Test case 18 - Game Restarted",
+        "steps": ["Restart the game after a winning combination is reached"],
+        "expected_result": "The game should restart"
+    },
+    {
+        "test_id": "TL019",
+        "description": "Test case 19 - Game Paused",
+        "steps": ["Pause the game before clicking on a number link"],
+        "expected_result": "The game should pause"
+    },
+    {
+        "test_id": "TL020",
+        "description": "Test case 20 - Game Resumed",
+        "steps": ["Resume the game after pausing it"],
+        "expected_result": "The game should resume"
+    }
+]
+
+
+with open("test_cases.json", "w") as f:
+    json.dump(test_cases, f, indent=2)
+
+print(f" {len(test_cases)} test cases saved to test_cases.json")

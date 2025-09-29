@@ -1,0 +1,92 @@
+[
+  {
+    "test_id": 1,
+    "verdict": "Pass",
+    "evidence": [
+      "screenshot_1.png"
+    ],
+    "reproducible": true,
+    "notes": "No issues"
+  },
+  {
+    "test_id": 2,
+    "verdict": "Pass",
+    "evidence": [
+      "screenshot_2.png"
+    ],
+    "reproducible": true,
+    "notes": "No issues"
+  },
+  {
+    "test_id": 3,
+    "verdict": "Pass",
+    "evidence": [
+      "screenshot_3.png"
+    ],
+    "reproducible": true,
+    "notes": "No issues"
+  },
+  {
+    "test_id": 4,
+    "verdict": "Pass",
+    "evidence": [
+      "screenshot_4.png"
+    ],
+    "reproducible": true,
+    "notes": "No issues"
+  },
+  {
+    "test_id": 5,
+    "verdict": "Pass",
+    "evidence": [
+      "screenshot_5.png"
+    ],
+    "reproducible": true,
+    "notes": "No issues"
+  },
+  {
+    "test_id": 6,
+    "verdict": "Pass",
+    "evidence": [
+      "screenshot_6.png"
+    ],
+    "reproducible": true,
+    "notes": "No issues"
+  },
+  {
+    "test_id": 7,
+    "verdict": "Pass",
+    "evidence": [
+      "screenshot_7.png"
+    ],
+    "reproducible": true,
+    "notes": "No issues"
+  },
+  {
+    "test_id": 8,
+    "verdict": "Pass",
+    "evidence": [
+      "screenshot_8.png"
+    ],
+    "reproducible": true,
+    "notes": "No issues"
+  },
+  {
+    "test_id": 9,
+    "verdict": "Pass",
+    "evidence": [
+      "screenshot_9.png"
+    ],
+    "reproducible": true,
+    "notes": "No issues"
+  },
+  {
+    "test_id": 10,
+    "verdict": "Pass",
+    "evidence": [
+      "screenshot_10.png"
+    ],
+    "reproducible": true,
+    "notes": "No issues"
+  }
+]
